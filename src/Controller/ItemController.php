@@ -6,6 +6,12 @@ use App\Model\ItemManager;
 
 class ItemController extends AbstractController
 {
+    public function welcome(): string
+    {
+        $name = 'Twig';
+        return $this->twig->render('Item/welcome.html.twig', ['name' => $name]);
+    }
+
     /**
      * List items
      */
